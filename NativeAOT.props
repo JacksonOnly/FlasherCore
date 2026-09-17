@@ -1,0 +1,40 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishAot>true</PublishAot>
+    <PublishTrimmed>true</PublishTrimmed>
+    <TrimMode>full</TrimMode>
+    <EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>
+    <UseSizeOptimizedLinq>true</UseSizeOptimizedLinq>
+    <EventSourceSupport>false</EventSourceSupport>
+    <HttpActivityPropagationSupport>false</HttpActivityPropagationSupport>
+    <MetadataUpdaterSupport>false</MetadataUpdaterSupport>
+    <MetricsSupport>false</MetricsSupport>
+    <Http3Support>false</Http3Support>
+    <WindowsSupportedOSPlatformVersion>5.1</WindowsSupportedOSPlatformVersion>
+    <TargetPlatformMinVersion>5.1</TargetPlatformMinVersion>
+    <EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <NativeDebugSymbols>true</NativeDebugSymbols>
+    <TrimmerRemoveSymbols>false</TrimmerRemoveSymbols>
+    <DebuggerSupport>true</DebuggerSupport>
+    <TracingSupport>true</TracingSupport>
+    <DiagnosticsSupport>true</DiagnosticsSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <NativeDebugSymbols>false</NativeDebugSymbols>
+    <TrimmerRemoveSymbols>true</TrimmerRemoveSymbols>
+    <DebuggerSupport>false</DebuggerSupport>
+    <TracingSupport>false</TracingSupport>
+    <DiagnosticsSupport>false</DiagnosticsSupport>
+  </PropertyGroup>
+  <ItemGroup>
+	  <PackageReference Include="VC-LTL" Version="5.3.1" />
+	  <PackageReference Include="YY-Thunks" Version="1.1.10-Beta1" />
+    <RdXmlFile Include="..\rd.xml" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,26 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Build/">
+    <File Path="NativeAOT.props" />
+    <File Path="rd.xml" />
+  </Folder>
+  <Folder Name="/Projects/">
+    <Project Path="FlasherCore.Common/FlasherCore.Common.csproj" Id="7e7ac081-b9c3-4e82-a27e-ea606a20c88e">
+      <Platform Solution="*|x86" Project="x86" />
+    </Project>
+    <Project Path="FlasherCore.Firmware/FlasherCore.Firmware.csproj">
+      <Platform Solution="*|x86" Project="x86" />
+    </Project>
+    <Project Path="FlasherCore.Sdk/FlasherCore.Sdk.csproj" Id="0a833c22-122d-4009-8055-e4c3ea87190f">
+      <Platform Solution="*|x86" Project="x86" />
+    </Project>
+    <Project Path="ProjectLogger/ProjectLogger.csproj" Id="7edb431f-412e-4723-b0f5-8b6a35430133" />
+    <Project Path="ProjectTester/ProjectTester.csproj" Id="9d0750ef-7f46-41bd-a3ce-44d6f9a2d088">
+      <Platform Solution="*|x86" Project="x86" />
+    </Project>
+  </Folder>
+</Solution>

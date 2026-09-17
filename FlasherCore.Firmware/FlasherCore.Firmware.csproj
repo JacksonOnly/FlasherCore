@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <NativeLib>Shared</NativeLib>
+    <Platforms>AnyCPU;x86</Platforms>
+    <Company>FlasherCore</Company>
+    <Copyright>FlasherCore - XYCS</Copyright>
+    <Description>FlasherCore.Firmware项目</Description>
+    <Version>1.3.0</Version>
+    <FileVersion>1.3.0</FileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IlcGenerateMstatFile>true</IlcGenerateMstatFile>
+    <IlcGenerateDgmlFile>true</IlcGenerateDgmlFile>
+  </PropertyGroup>
+  <Import Project="..\NativeAOT.props" />
+  <ItemGroup>
+    <Compile Remove="Models\FileInfo.cs" />
+    <Compile Remove="Models\FileInfoType.cs" />
+    <Compile Remove="Models\PayloadHeader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="update_metadata.proto" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.33.2" />
+    <PackageReference Include="SharpCompress" Version="0.42.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlasherCore.Common\FlasherCore.Common.csproj" />
+  </ItemGroup>
+</Project>
